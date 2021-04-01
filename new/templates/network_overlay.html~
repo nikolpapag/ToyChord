@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block styling %}
+    #main {
+        padding: 415px 0px;
+    }
+{% endblock %}
+
+{% block content %}
+    <h2 class="subtitle">Overlay</h2>
+
+    <hr class="heading">
+
+      <p class="Network Overlay:">
+        Nodes are in this order {{nodes}}
+      </p>
+{% endblock %}

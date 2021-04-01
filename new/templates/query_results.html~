@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block styling %}
+    #main {
+        padding: 200px 0px;
+    }
+{% endblock %}
+
+{% block content %}
+    <h2 class="subtitle"><font face = "arial,helvetica">Search</font></h2>
+
+    <hr class="heading">
+
+      <p class="Search Results:">
+        {% if found_song == "yes" %}
+          <p>
+            <font face = "arial,helvetica"><p style="color:#FFBC6E">You searched for:</p> {{found_song_title}}</font></p>
+            <p>
+            <font face = "arial,helvetica">
+            <p style="color:#FFBC6E">The result is:</p> {{found_song_value}}</font>
+          </p>
+        {% else %}
+        <p>
+          <font face = "arial,helvetica"><p style="color:#FFBC6E">No results found for</p> {{found_song_title}}</font>
+        </p>
+        {% endif %}
+      </p>
+{% endblock %}

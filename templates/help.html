@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block styling %}
+    #main {
+    		padding: 310px 0px;
+    }
+{% endblock %}
+
+{% block content %}
+    <h2 class="subtitle"><p style="color:#ffdfba"><b><font face = "arial,helvetica">Help</font></b></p></h2>
+
+    <hr class="heading">
+    <h3 align="left">
+    <font face = "arial,helvetica">
+    <p class="inserting"> <p style="color:#FFBC6E">Insert key,value :</p>  Insert a new (key,value) pair. Key is the song title and value is a string</p>
+    <p class="searching"> <p style="color:#FFBC6E">Search key :</p> Search for a specific key and print its value. If key = *, it returns every (key,value) pair that has been saved in DHT from each node</p>
+    <p class="deleting"> <p style="color:#FFBC6E">Delete key :</p> Deletes a (key,value) pair specified by key.</p>
+    <p class="overlaying"> <p style="color:#FFBC6E">Overlay :</p> Prints the topological order of the network. The nodes in the chord ring are printed with order in which they are connected.</p>
+    <p class="departing"> <p style="color:#FFBC6E">Depart :</p> Node departure. The node leaves the system gracefully.</p>
+    </font></h3>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block styling %}
+    #main .heading {
+            width: 300px!important;
+            margin: auto;
+        }
+
+    @media only screen and (min-width: 600px) {
+        #main {
+            padding-bottom: 360px;
+        }
+    }
+
+    @media only screen and (min-width: 1200px) {
+        #main {
+            padding: 125px 0px;
+        }
+    }
+{% endblock %}
+
+
+{% block content %}
+    <div class="row">
+        
+        <div class="col-text">
+            <h2 class="subtitle"><font face = "arial,helvetica">Welcome to ToyChord</font></h2>
+
+            <hr class="heading">
+
+            <p>
+            <font face = "arial,helvetica">ToyChord is a file sharing application with multiple distributed DHT nodes. Each node implements all DHT functions. 
+            It also implements a simplified version of the Chord protocol and handles entry and exit (graceful departure) of nodes.</font></p>
+
+            <a class="form-btn" href="/insert"><b><font face = "arial,helvetica">Insert</font></b></a>
+            <a class="form-btn" href="/search"><b><font face = "arial,helvetica">Search</font></b></a>
+        </div>
+    </div>
+{% endblock %}

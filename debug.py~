@@ -1,0 +1,46 @@
+import hashlib
+import bisect
+'''
+data = "/5003 Radioactive,7658 flaksd,flakdj alskdfjk,akfd/5001 mongo,13 pete,65"
+nodes = data.split("/")
+nodes = nodes[1:]
+#print (nodes[0].split()[0])
+test = [10, 30, 40, 60, 80]
+element = 35
+bisect.insort(test, element)
+#print(test)
+#print(test.index(35))
+
+global x
+x = 5
+print(x)
+def change(global x):
+    x = x + 2
+    print(x)
+    return 
+change(x)
+print(x)
+'''
+one= hashlib.sha1("5000".encode()).hexdigest()
+three= hashlib.sha1("5002".encode()).hexdigest()
+four= hashlib.sha1("5003".encode()).hexdigest()
+read=hashlib.sha1("ready".encode()).hexdigest()
+if(read<=one):
+	print("one")
+if(read<=three):
+	print("three")
+'''
+if(one<three):
+	if(three<four):
+		print("5000<5002<5003")
+	else:
+		print("5000<5003<5002")
+else:
+	if(three<four):
+		if (one<four):
+			print("5002<5000<5003")
+		else:
+			print("5002<5003<5000")
+	else:
+		print("5003<5002<5000")
+'''

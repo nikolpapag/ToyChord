@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block styling %}
+    #main {
+        padding: 150px 0px;
+    }
+{% endblock %}
+
+{% block content %}
+    <h2 class="subtitle"><font face = "arial,helvetica">Insert</font></h2>
+
+    <hr class="heading">
+
+    <form class="form" action = "#" method = "POST">
+        <input class="form-input" type="text" id="song_title" name="song_title" placeholder="Song Title...">
+        <input class="form-input" type="text" id="song_value" name="song_value" placeholder="Song Value...">
+
+        <input class="form-btn" type="submit" value="Insert">
+  </form>
+{% endblock %}

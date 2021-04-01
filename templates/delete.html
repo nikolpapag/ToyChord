@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block styling %}
+    #main {
+        padding: 350px 0px;
+    }
+{% endblock %}
+
+{% block content %}
+    <h2 class="subtitle"><font face = "arial,helvetica">Delete</font></h2>
+
+    <hr class="heading">
+
+    <form class="form" action="#" method = "POST">
+        <input class="form-input" type="text" id="song_title" name="song_title" placeholder="Enter song title..">
+
+        <input class="form-btn" type="submit" value="Delete">
+  </form>
+{% endblock %}

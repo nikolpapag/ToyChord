@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block styling %}
+    #main {
+        padding: 225px 0px;
+    }
+{% endblock %}
+
+{% block content %}
+	<h2 class="subtitle"><font face = "arial,helvetica">Insert</font></h2>
+		
+	<hr class="heading">
+
+      <p class="Inserted">
+          <p><font face = "arial,helvetica">
+            <p style="color:#FFBC6E">Song Inserted</p></font>
+          </p>
+      </p>
+{% endblock %}

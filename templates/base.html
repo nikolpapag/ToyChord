@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ToyChord</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #title {
+            text-align: center;
+            padding: 4px 0;
+            background-color: #ffdfba;
+            color: black
+        }
+
+        #navbar ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #ffffba	;
+          display: flex;
+          justify-content: space-around;
+        }
+
+        #navbar li a {
+          display: block;
+          color: black;
+          text-align: center;
+          padding: 10px 16px;
+          text-decoration: none;
+        }
+
+        #navbar li a:hover {
+          background-color: #ffdfba	;
+          color:	#FF6775;
+          transition: 0.5s ease-in-out;
+          cursor: pointer;
+        }
+
+        #main {
+            background-image: linear-gradient(rgba(0,0,0,0.7),
+                rgba(0,0,0,0.3)), url("{{url_for('static', filename='img2.jpg')}}");
+            
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center
+        }
+
+        {% block styling %}
+        {% endblock %}
+
+        #main .subtitle {
+            text-align: center;
+            color: #ffdfba;
+        }
+
+        #main .heading {
+            width: 200px;
+            border-color: #ffdfba;
+            margin-bottom: 20px;
+        }
+
+        #main .row {
+            display: flex;
+        }
+
+        #main .col-image {
+            width: 50%;
+            padding: 20px 20px 20px 100px;
+        }
+
+        #main .col-text {
+            width: 50%;
+            padding: 20px 100px 20px 20px;
+            text-align: center;
+            margin: auto;
+        }
+
+        #main .img {
+            width: 100%;
+        }
+
+        #main .col-text a {
+            display: block;
+            text-decoration: none;
+        }
+
+        #main .form {
+            text-align: center
+        }
+
+        #main .form-input {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid White;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+
+        #main .form-input:focus {
+            outline-color: #ffdfba;
+        }
+
+        #main .form-btn {
+          width: 50%;
+          background-color: transparent;
+          color: #ffdfba;
+          padding: 14px 20px;
+          margin: 8px auto;
+          border: 1px solid #ffdfba;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+
+        #main .form-btn:hover {
+          background-color: #ffffba;
+          color: #FF6775;
+          transition: 0.5s ease-in-out;
+        }
+
+        #main .help {
+            text-align: center;
+            width: 50%;
+        }
+
+        #footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #ffdfba;
+            color: black
+        }
+
+        @media screen and (max-width: 600px) {
+            #main .row {
+                display: block;
+            }
+
+            #main .col-text {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="title">
+        <h1><font face = "arial,helvetica">ToyChord</font></h1>
+    </div>
+
+    <nav id="navbar">
+        <ul>
+            <li>
+                <a href="/"><font face = "arial,helvetica">Home</font></a>
+            </li>
+            <li>
+                <a href="/insert"><font face = "arial,helvetica">Insert</font></a>
+            </li>
+            <li>
+                <a href="/search"><font face = "arial,helvetica">Search</font></a>
+            </li>
+            <li>
+                <a href="/delete"><font face = "arial,helvetica">Delete</font></a>
+            </li>
+            <li>
+                <a href="/overlay"><font face = "arial,helvetica">Overlay</font></a>
+            </li>
+            <li>
+                <a href="/help"><font face = "arial,helvetica">Help</font></a>
+            </li>
+            <li>
+                <a href="/depart"><font face = "arial,helvetica">Depart</font></a>
+            </li>
+        </ul>
+    </nav>
+
+    <section id="main">
+        {% block content %}
+        {% endblock %}
+    </section>
+
+    <footer id="footer">
+        <p><font face = "arial,helvetica">Created by Easy Riders</p>
+    </footer>
+</body>
+</html>
